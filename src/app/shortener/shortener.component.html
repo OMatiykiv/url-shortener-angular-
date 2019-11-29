@@ -1,0 +1,23 @@
+<h1>Shortener</h1>
+
+<div class="search">
+  <input type="text" placeholder="Search" [(ngModel)]='search' class="searchBtn">
+</div>
+
+<div>
+  <input type="text" placeholder="Name" [(ngModel)]='name'>
+  <input type="text" placeholder="URL" [(ngModel)]='url'>
+  <button (click)='onSubmit()'>Shorten</button>
+</div>
+
+<div>
+  <div *ngFor="let short of shortenings">
+    <div *ngIf="searching(short)" class="card item">
+      <h2>{{ short.name }}</h2>
+      <div>
+        <button (click)='goTo(short)' class="itemBtn">View details</button>
+        <button (click)='onDelete(short.code)' class="itemBtn">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>

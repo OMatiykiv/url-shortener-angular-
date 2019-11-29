@@ -1,0 +1,25 @@
+header {
+  background-color: teal;
+  color: #fff;
+  padding: 0 16%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+h1 {
+  display:inline-block;
+  text-align: center;
+}
+
+a {
+  display:inline-block;
+  padding: 4vh 1vw;                  
+  text-decoration: none;
+  color: #fff;
+}
+
+a:hover {
+  text-decoration: underline;
+  transform: scale(1.1);
+}

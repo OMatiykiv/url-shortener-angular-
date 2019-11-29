@@ -1,0 +1,14 @@
+<div *ngFor="let short of shortenings">
+    <div *ngIf="short.code === id" class="main-links">
+        <h2 class='header'>{{short.name}}</h2>
+        <p>Original link:</p>
+        <a [href]="short.original_link" target="_blank">{{short.original_link}}</a>
+        <p>Share link:</p>
+        <a [href]="'https://'+short.share_link" target="_blank">{{short.share_link}}</a>
+        <p>Short link:</p>
+        <a [href]="'https://'+short.short_link" target="_blank">{{short.short_link}}</a>
+        <p>Short link2:</p>
+        <a [href]="'https://'+short.short_link2" target="_blank">{{short.short_link2}}</a>
+        <button (click)='onDelete(id)'>Delete</button>
+    </div>
+</div>
